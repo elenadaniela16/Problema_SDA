@@ -1,0 +1,61 @@
+//EXEMPLU 1
+//Locuri de parcare
+//Întorcându-mă acasă și ajungând în preajma locuinței, am început să caut un loc de
+//parcare. După prima tură nu am observat nimic liber, deși aș fi fost foarte norocos să
+//rezolv problema parcării ‘din prima’. Nu m-am lăsat păgubaș și am continuat să caut, mai
+//ales că eventuala lipsă a unui astfel de loc peste noapte este o situație angoasantă.
+//Astfel, până am găsit locul dorit am reluat (am repetat) de un număr de ori traseul pe care
+//îl fac de obicei într-o astfel de situație, urmărind de fiecare dată dacă s-a eliberat ceva.
+//Venind în ajutorul riveranilor, administrația locală a stabilit că oaspeții
+//parcării trebuie să elibereze un loc după ce s-a acumulat un număr de minute multiplu
+//de 30.
+//Pentru calculul timpului până la eliberarea unui loc de parcare va trebui să țin seama atât
+//de timpul inițial (t0) în minute, asociat fiecărui loc de parcare la momentul începerii
+//căutărilor mele, cât și de durata, tot în minute, a fiecărui nou traseu pe care-l parcurg.
+//Durata fiecărui nou traseu poate să varieze, prin comparație cu cele ale
+//trecerilor anterioare. Odată un nou traseu încheiat, contorizez minutele necesare
+//parcurgerii acestuia și le adaug la cele deja acumulate pentru fiecare loc de
+//parcare, încercând să văd ce locuri de parcare îndeplinesc condiția de eliberare. Dacă
+//am astfel de locuri, le elimin din eventualele căutări ulterioare.
+//În contextul prezentat, dacă presupunem că locurile de parcare (parte dintre acestea fiind
+//ocupate de oaspeți (non-riverani)) sunt numerotate folosind identificatori numere
+//naturale - pentru fiecare loc reținând numărul de minute asociat, ce îmi oferă
+//durata sa totală de ocupare, identificați dacă am reușit sau nu să găsesc un loc liber,
+//după încheierea tuturor încercărilor pe care mi le-am propus.
+//Date de intrare
+//Pe prima linie de intrare se prezintă o singură valoare, N, reprezentând numărul
+//maxim al locurilor de parcare (cf. restricției 1). Apoi, pe următoarele N linii sunt oferite
+//perechi de valori idit0,iidit0,i care îmi indică timpul inițial de ocupare, în
+//minute, asociat fiecărui loc de parcare (de la care plec cu calculul duratei cumulate de
+//ocupare). Valorile idi trebuie să fie conforme restricției 2, iar t0,i conforme restricției 3.
+//Pe ultima linie de la intrare apare numărul de treceri (încercări sau parcurgeri) notat
+//cu tr (conform restricției 4), urmat de tot atâtea valori reprezentând duratele, în minute,
+//ale fiecărei treceri (parcurgeri) – toate separate prin spațiu.
+//Date de ieșire
+//Pe o singură linie se va afișa unul dintre mesajele „Success” sau „Failure”, în funcție de
+//identificarea reușită sau nu a unui loc de parcare liber, separat prin două puncte (
+//de identificatorul locului de parcare identificat (v. exemplul). După ce toate
+//parcurgerile (trecerile) planificate s-au încheiat, dacă sunt găsite mai multe locuri
+//disponibile, atunci se va lua în considerare locul cu identificator maxim.
+//În situația în care unele dintre datele de intrare nu respectă restricțiile impuse, se va afișa
+//mesajul de eșec („Failure”) și rezolvarea problemei se va încheia.
+//Restricții de rezolvare și precizări
+//1. 1≤N≤251≤N≤25, N fiind numărul maxim de locuri de parcare.
+//2. 1≤idi≤251≤idi≤25, idi reprezentând valoarea identificatorului unui loc de parcare.///
+//3. 1≤t0,i<301≤t0,i<30, valoarea timpului de start, asociată inițial fiecărui loc de
+//parcare.
+//4. 1≤tr≤101≤tr≤10, tr reprezentând numărul trecerilor (numărul de reluări ale
+//traseului de căutare a unui loc liber).
+//5. Rezolvarea se va face folosind exclusiv colecțiile abstracte/dinamice de date
+//predate. Vectorii (uni sau multi-dimensionali) chiar și alocați dinamic,
+//nu reprezintă o colecție abstractă de date și prin urmare nu vor fi luați în
+//considerare în soluțiile oferite.
+//Exemplu
+//Date de intrare Ieșire program
+//5 Success:4
+//1 10
+//3 5
+//2 8
+//4 24
+//5 2
+//3 20 16 11

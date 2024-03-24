@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1711289166 source:d:\anul 3 etti(rst)\problema_sda\main.c
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	<stdlib.h>
+	"ex1.h"
+
+1711289166 d:\anul 3 etti(rst)\problema_sda\ex1.h
+
+1711289108 source:d:\anul 3 etti(rst)\problema_sda\ex1.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+	"ex1.h"
+
